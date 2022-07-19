@@ -1,0 +1,74 @@
+Fragments
+. What are the various layouts that are created when a developer utilizes the Fragment option in the Android Design Support Library? What are the components of each created layout? How can these layouts be used (provide an example for each layout)?
+
+Fragment.
+- autonomous
+	- reusable
+	- lifecycles tracks its own state
+	- event handlers
+	- must be hosted
+- modularity
+	- chunking
+	- global elements go in the activity
+
+- create a fragment
+	- fragmentManager has methods to 
+	
+	
+	When we create a new android project using the Basic Activity template, we get access to features of the Android Design Support Library. Note that Chapter 4 of Deitel refers to a Blank Activity where it should be updated to reference a Basic Activity, as the templates have changed since that writing. My version of AndroidStudio does not have a Blank Activity template.
+	
+	Using the Basic Activity template you see a bare bones set up to use fragments. In activity_main.xml we see a CoordinatorLayout being used. This is a child of FrameLayout, but with more functionality, and it is used as a default to manage multple frames with complex user interactions such as drags swipes, flings or other gestures.(StackOverflow. 2017). One specific and useful feature of a ConstraintLayout is that it can overlay views over eachother, which is not possible (I don't think) with Constraint or Relative layouts. This is what makes it possible to "float" components in the UI (StackOverflow. 2017). Floats are achieved by changing the elevation of views (Deitel. 2017. Chapter 4)
+	We can "nest" layouts inside of CoordinatorLayout with an <include /> tag in the XML.
+	
+	activity_main.xml
+	    <include layout="@layout/content_main" />
+	
+	The default activity_main.xml comes with a top navigation bar or app bar and a bottom bar that has a floating button. The emtpy space in between these components is actually the "included" content_main layout, which is blank in the template. Looking inside of content_main.xml, we see a ConstraintLayout wrapping a fragment. which is dimensionless (not visible in the UI). This is the basic setup: an activity (MainActivity in this case) that acts as a host for multiple fragments (two in this case). There are many possible configurations but the basic idea is to have few activities, with multiple fragments. If multiple fragments are being displayed simultaneously a fragment hierarchy is used with child fragments and a parent fragment.(developer.android. 2022).
+	A final key component is the FragmentManager controls the presentation of fragments and responds to user actions, kind of like an event listener, but specific to fragments. It lets us perform CRUD operatios on fragments. We invoke FragmentManager with the getSupportFramgnetManger() method. Here is a read operation using FragmentManager
+	
+	FragmentManager fragmentManager = getSupportFragmentManager();
+fragmentManager.beginTransaction()
+    .replace(R.id.fragment_container, ExampleFragment.class, null)
+    .setReorderingAllowed(true)
+    .addToBackStack(null)
+    .commit();
+
+...
+
+ExampleFragment fragment =
+        (ExampleFragment) fragmentManager.findFragmentById(R.id.fragment_container);
+
+
+
+	https://developer.android.com/guide/fragments/fragmentmanager
+	
+	https://stackoverflow.com/questions/33983393/blank-activity-vs-empty-activity
+	
+	
+	https://stackoverflow.com/questions/30536749/what-is-coordinatorlayout
+	
+	Intents:
+	I have a new understanding of intents. they are a way fo the app to decide which activity to inflate. This is a trick because what activity is shown depends on what the user does. In web pages rendered in a browser, the pages are distinct objects that can be reerenced and niviagated to...why is this so hard in android? But intents do this. it's like placing an order at a restaurant. you say "this is what I want" but you don't really have any control over when or how your order is actually prepared. In android the chef is the application. It will get to your intent when it decides to.
+	
+	So the components and the logic that i need are
+	
+	COMPONENT                                 LOGIC
+	ImageView                                 picked at random from an array
+	ChoiceButtons                             onClick listeners return a true or false and trigger a user message
+	UserMessageTextView                       text display
+	
+	EXTENSIONS:
+	- score keeping
+	- difficulty level setting (number of alternative questions)                            
+	- animations
+	
+	
+	
+	
+	1. add a fragment 3 replicating what is there...
+	2. change the fragment names to ButtonsFrag WrongAnswerFrag RightAnswerFrag
+	3. Change the text for fragment 1 to Guess the picture
+	4. insert an image to first fragment and display
+	5. render image from an array
+	
+	https://www.ebookfrenzy.com/retail/chipmunkjava/index.php

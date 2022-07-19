@@ -1,0 +1,53 @@
+<p>
+Best practices associated with setting and declaring the properties of an Android user interface:
+
+</p>
+<p>
+    Best practices in android application development address issues or responsivenss, accessability and internationalization (Deitel & Deitel. 2017).
+    Responsiveness is a key imperative and design principal in mobile software development. Best practices in achieveing responsive views include,
+    <ul>
+        <li>
+             using a responsive layout such as ConstraintLayout
+        </li>
+        <li>
+             using different layouts for different devices.
+        </li>
+    </ul>
+    Layouts are xml files in directory res/layout. They can be written or built with the LayoutEditor, so that each activity is paired to a particular layout. For example, MainActivity.java is paired to activity_main.xml by invoking setContentView(R.layout.activity_main);
+</p>
+<p>Best practices call for accessible apps so that "users of diverse abilities to navigate, understand, and use your UI" (material.io. Accesibility)
+    <blockquote>
+        Improving your product’s accessibility can enhance the usability for all users, including those with low vision, blindness, hearing impairments, cognitive impairments, motor impairments or situational disabilities (such as a broken arm).
+        - material.io
+
+    </blockquote>
+Best practices for building an accessible UI include:
+<ul>
+    <li>
+        Structuring components semantically and with good text descriptors that screen readers such as TalkBack can read. This is generally done by setting the contentDescription attribute of a view.
+
+    </li>
+    <li>Providing feedback through visual and textual cues, to guide user through an app.</li>
+    <li>Provide a clear navigation interface.</li>
+    <li>Clearly visible elements.</li>
+        <li>Sufficient contrast and size.</li>
+        <li>A clear hierarchy of importance.</li>
+        <li>Highlight key information.</li>
+    
+</ul>
+</p>
+<p>Much as we can specify different layouts for different devices we can also specify different layouts for different <em>countries</em>. Android can then automatically load the resources that match the devices locale settings (Deitel & Deitel. p. 70). Other steps in internationalizing an app include providing translastions of needed strings in a resource file,</p>
+<p>References:</p>
+<p>
+    Udacity. Developing Android Apps by Google. (Accessed 5/23/22). Lessons 1.20 (Responsive Design), 1.  <br>
+    &emsp;https://classroom.udacity.com/courses/ud851
+
+</p>
+<p>
+developer.android.com. (Accessed 5/23/22). <em>Build a Responsive UI with ConstraintLayout.</em> <br>
+&emsp;https://developer.android.com/training/constraint-layout
+
+</p>
+<p>Deiter, Paul & Deitel, Harvey. (2017). <em>Android How to Program 3rd Edition.</em></p>
+<p>Material Design. (Accessed 5/23/22). <em>Accessability.</em><br>
+&emsp;https://material.io/design/usability/accessibility.html#understanding-accessibility</p>

@@ -1,0 +1,40 @@
+Discuss how you would utilize activities, intents, fragments, services, and content providers in an Android application that you are tasked with developing
+
+emulator or actual devic
+layout editor, which is built from ViewGroup objects (containers) and View objects (buttons and stuff)
+
+a project is a container
+	files
+	assets
+	settings
+	layout - buttons, text boxes, scrollables, menus
+	SDK
+	
+	
+app components
+	- activitites
+		a single screen with stuff on it. a view ...a 		page?... they are independent of 		     	eachother ...modules... classes?
+		activities help to ...
+			- track the current activity
+			- remember past activites
+			- go back to previous states
+			- user flows and coordinating stuff
+			
+		activities work togehter but they are loosely bound. manage activity lifecycles.
+			
+		https://developer.android.com/guide/components/activities/intro-activities
+	- services
+		- a service runs in the background with no UI
+		- might fetch data asynchronously, or play music
+	- broadcast receivers
+		- system wide message like low battery charge
+	- content prviders are basically the databases these things query
+	
+	- intents
+		- messaging objects methods? functions? startActivity(), or start a service with a job scheduler or deliver a broadcast
+		- takes a component name (sounds like a method name)
+		- takes an action
+		
+		
+Tutorial walkthrough
+	- ./studio.sh

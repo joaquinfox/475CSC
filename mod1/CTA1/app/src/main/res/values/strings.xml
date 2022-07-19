@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tip Calculator by Russ</string>
+    <string name="enter_amount">Eat beans</string>
+    <string name="tip_percentage">13%</string>
+    <string name="tip">Tip</string>
+    <string name="total">Total</string>
+</resources>

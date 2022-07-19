@@ -1,0 +1,83 @@
+<p>
+    Discuss how you use Android resources to create interactive user interfaces. List at least three resource types and show how they are used in a user interface.
+</p>
+<p>When an Android application launches, the android IDE generates a class R, with categories for any of the resources an application will present to a user. These resources include 
+    <ul>
+        <li>res/string which holds XML defining the static text that will be rendered.</li>
+        <li>res/drawable for images and graphics</li>
+        <li>res/layout which defines the graphical structure of the app in XML files.</li>
+    </ul>
+    
+    
+    There are other data that could be held or defined in res. Combined these resources define the appearance and control the behavior of every  UI element visible to the user.(Deites & Deitel. 2017. Chapter 3.)</p>
+<p>When a user interacts with the resources defined above, event listeners can register the user actions.  Those user actions can then be acted on programatically or handled with presets defined in the manifest XML. </p>
+<p> In Android event listeners are Objects of class TextWatcher. Exactly how you apply an event listener will vary depending on the widget. EditText has a built in class method, addTextChangedListener, which makes it easy to apply a listener. Here is how to do that.</p>
+<p>Define an EditText component to take user input and a TextView component to render that input. 
+<pre>
+    <code>
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:hint="@string/inputPromptEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholderTextView"
+        android:id="@+id/outputField"
+        app:layout_constraintEnd_toEndOf="@+id/inputEditText"
+        app:layout_constraintStart_toStartOf="@+id/inputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditText" />
+
+</code></pre>
+    
+    
+    
+  To retrieve a TextEdit element by id, we use the TextView method findViewById()
+    <pre><code>
+
+        EditText priceEditText = (EditText) findViewById(R.id.purch_priceEditText);
+
+    </code></pre>
+    ... and then apply the event listener ...
+    <pre><code>
+        amountEditText.addTextChangedListener(purch_priceTextWatcher);
+    </code></pre>
+</p>
+<p>
+    We create an instance of TextWatcher, which is an abstract class with three abstract methods that must be overriden and implemented (or left blank):
+    <pre><code>
+
+        private final TextWatcher purch_priceTextWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                price = Double.parseDouble(s.toString());
+                pmt_header.setText(currencyFormat.format(price));
+            }
+    
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+    
+            }
+    
+            @Override
+            public void afterTextChanged(Editable s) {
+    
+            }
+        };
+    </code></pre>
+</p>
+<p>How we define the three member methods of TextWatcher will dictate how our app handles user inputs.</p>
+
+<p>References:</p>
+<p>
+developer.android.com. (Accessed 5/30/22). <em>TextWatcher.</em> <br>
+&emsp;https://developer.android.com/reference/android/text/TextWatcher
+
+</p>
+<p>Deitel, Paul & Deitel, Harvey. (2017). <em>Android How to Program 3rd Edition.</em>Chapter 3, p. 99</p>

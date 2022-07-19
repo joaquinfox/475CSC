@@ -1,0 +1,13 @@
+<p>These elements are all android app components, needed to build and run an android app. Because Android is based on IntelliJ, which is based on Java, there is a close relationship between all of these components and traditional Java objects. There are also key differences, which I am still struggling to understand. All of these key elements are described in an application manifest. They can also be defined and typed directly into the manifest.</p>
+<p>Activities are children of class Activity and are a central structural component of an android app. All of the functionality and UI of an app will be encapsulated in an activity. I think of activities as windows, each with a distinct view. The Android documentation describes activities as <em>screens</em>, which might be a good way to think of them.</p>
+<p><em>Intents</em> are associated with activities. They seem to me like handles or permissions that are used to transition between activities. For example, to enable an activity to send data somewhere, we could write the following XML <br>
+<pre><code>
+    action android:name="android.intent.action.SEND"
+
+
+</code></pre>
+It's hard for me to think of a corollary between activities and intents, and the kind of Java we have been writing up to this point. They do not seem like traditional objects or classes or methods Instead they seem more like web pages. Like web pages, activities are managed with a series of lifecycle methods such as <code style="color: black;">onCreate()</code>. These methods are triggered by state changes that a user causes within an activity.</p>
+<p>By contrast, a <em>fragment</em> seems like a pretty simple thing to understand. It is a subset of an activity that modularizes some functionality.</p>
+<p><em>Services</em> do things in the background, like retrieving data from a database or playing music. Services do not present a UI, so a user can't affect them. I imagine that a lot of game logic would run on services. Another component, <em>content providers</em>, are similar to services in that they work in the background, and they work alongside services to provide needed functionality, such as CRUD operations to a database.</p>
+<p>References:</p>
+<p>developers.android. (Retrieved 5.17.22). <em>Guide to app architecture</em> <br />&emsp;https://developer.android.com/topic/architecture</p>

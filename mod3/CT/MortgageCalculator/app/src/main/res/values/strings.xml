@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MortgageCalculator by Joaquin</string>
+    <string name="price">Purchase price</string>
+    <string name="down_pmt">Down payment</string>
+    <string name="interest">Annual interest</string>
+
+    <string name="button_prompt">Calculate your monthly payments</string>
+
+    <string name="ten_yrLabel">10 yr</string>
+    <string name="twenty_yrLabel">20 yr</string>
+    <string name="thirty_yrLabel">30 yr</string>
+
+    <string name="ten_yrPmt">$0.00</string>
+    <string name="twenty_yrPmt">$0.00</string>
+    <string name="thirty_yrPmt">$0.00</string>
+
+
+    <string name="custom_termLabel"> "Or choose your own term:"</string>
+
+
+
+</resources>

@@ -1,0 +1,29 @@
+<p>
+  Great post Aaron. I especially like your discussion of string extraction and
+  your argument for considering that a best practice.  To flesh that out in some
+  detail, we could implement a string extraction as follows: 
+</p>
+<ul>
+  <li>
+    Instead of assigning a string in XML, 
+    <br>
+    <code style="color: black; font-family: monospace; background-color: rgb(204, 198, 198);">
+        android.id = "Long, long time ago ..."
+      </code> <br>
+      We assign an id ...<br>
+    <code style="color: black; font-family: monospace; background-color: rgb(204, 198, 198);">
+      android.id = "@+id/someUniqueIdentifier"
+    </code>
+  </li>
+  <li> Then, we can define a string variable in XML and put it in our resource folder.
+
+</li>
+  <li>Now we can call that string value from within the layout XML <br>
+<pre><code>
+    android:text="@string/firstString"
+</code></pre>
+
+</li>
+</ul></p>
+<p>developer.android.com. (Accessed 5/28/22). string - resources <br>
+&emsp;https://developer.android.com/guide/topics/resources/string-resource</p>

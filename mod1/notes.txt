@@ -1,0 +1,41 @@
+I am just realizing that ANdorid is AI. "The Android OS uses the mainifest to to decide how to integrate your app into the device's overall user experience."
+
+So the OS decides? and androis is an OS? well yes and yes. so programming an android app, is like a very opinionated and strict api for programmers. sounds like you do have limited choices, not so open as other platforms?
+
+FROM READING
+Android is
+distinguished by the fact that many vendors
+are cooperating to provide a non-proprietary
+development environment"?
+ - the above, how is this distinguished? it sounds like linux .... which i know android is buit on top of...maybe hes equating android to linux...
+ 
+ do developers sometimes have to pay fees to use a dev tool kit? whats an example of this?
+ do devs have to "pay fees on the apps" that they build?
+ 
+ what would be a "native" programmer? "The app developer API includes everything
+that a “native” programmer would have
+access to" ???
+
+ok so there is such a thing as "raw android". it is our development environment and what the class is about. so Android is NOT synonymous with AndroidStudio. i thought it more like node or react, a framework. 
+
+so at the end of this class i will be able to take a screen shot of a phone with an app that i built on it? nice!!!
+
+
+the mainfest file is the place where the multple pieces of code are indicated so that they are connected together as the constituents parts of a single app
+
+in android, attributes are stored in one place and logic in another. Executable code in one, resources in the other
+
+the GUI is specified separately from the code in an XML file...???
+
+separating logic from resources is needed to run the app on different devices... i guess modularizing the logic and layout separately then you can reuse the logic and just build the GUI
+
+so if you had a good, responsive web page, and you didnt' want to build out a whole native app could you use a simple native app with a web viewing window? pros cons?
+
+code obfuscation? really?
+
+
+the terminology is trippy.
+
+in android, an actiity is a UI for a thing a user can do. Like pick from a dropdown or fill out a form...its one of the important components in an android app. but there are other types of components. Background code, server calls, music, layouts....
+
+in web code you have html for the bones, css for the skin and java for the brain. or maybe nervous system. in android you have, activities, services, receivers and providers...

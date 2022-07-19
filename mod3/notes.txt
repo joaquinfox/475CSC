@@ -1,0 +1,86 @@
+how do i get filler text to fill an EditView?
+i defined a string and gave it a name.... the name doesn't seem to get used anywhere...
+how does the tip app do it
+i think i need to instantiate the EditView in the activity
+
+when you build your app a class R gets magically generated and it builds the res folder with layouts and drawable and colors and id ...and other stuff. i don't think there is anything which the user interacts with that is not a resource. the views and widgets are called out in an xml layout file, whih are also in the res directory. 
+
+So the IDE builds the class R, with static methods... why do they need to be static? "so that you can access them in your code with R."... oh wait maybe its because to call a method from within the class definition you need the methods to be static. so static is like you can call it from within the class by main() ... and without static you can't access it ...
+
+
+inflating: the parsing of XML documents, by Android, and the building of the GUI.
+
+Respnsiveness
+ - you can have the IDE check the locale and set the apporpriate currency with format method
+ 
+ 
+ CTA3
+  format currency ...change dynamically? yes but you don't want to make the calculations untill all three inputs are available..
+  
+  Register event listeners:
+  put event listeners on the three input fields
+  
+  put a seekBar on the slider
+  
+  so my calculate method will take all the inputs and make all the calculations then set the textviews with the output... it does a lot....
+  but how do i get the inputs ...
+  
+  every EditText widget has a addTextChangedListener method that will register a TextWatcher (which is the event listener) so the widget has a method that creates the listener. there is something called the amountEditTextWatcher which i dont quite get ...
+  
+  Intents:
+  - can be used a bit like permissions ... to enable photo sharing
+  - used for launching
+  - used to decide which activity to execute...if an app states an intent to share pics then only other apps with intent to share pics will get called ...
+  - intents can transmit data
+  - action element says which activity 
+  
+  
+  to execute when the app launches
+  - 
+  I am trying to understand how the tip calculator assigns the placeholder to the EditText widget ... or does it even?
+  
+  
+  https://csuglobal.instructure.com/files/3833877/download?download_frd=1&verifier=VdMvhrvpJz5svPbiQcxlSILDU5tlNATeSD68nw1P
+  
+  
+  STUDY FLOW
+  - get EventListenerTest to run on numbers
+  - get it to make the calculations
+  - transfer this code to MortgageCalculator
+  - style it
+  
+  
+  
+  i have an input element taking user numeric inputs doing some math and returning the correct amount to a text view
+  
+  now add another input element.
+  capture that input and try to do somethnig with it.
+  
+  
+  catch and handle NumberFormatException
+  
+  add slider thing
+  
+ style it
+ 
+ So at this point I think i have all the logic worked out.
+ - capturing user inputs into the edit fields
+ - capturing the slider value
+ 
+ Next: combine all the logic into one app.
+ so combine the logic of SeekBarSimple and EventListener2
+ *****************DONE
+ 	- git init
+ 	- confirm basic layout and all components
+ 	- build edit input capture and confirm
+ 	- build slider input capture and confirm
+	- get the math right on edit components
+ 		
+ 	**********************TODO
+ 	- get the output for 10, 20, 30 yr payments
+ 
+ 	- get the math on seekbar
+ 	- refactor
+	- style 
+  
+  

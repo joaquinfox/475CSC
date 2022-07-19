@@ -1,0 +1,57 @@
+the From Weather App tutorial
+https://classroom.udacity.com/courses/ud851/lessons/b18af156-0bde-4de8-a2ae-5ae71f9a15c4/concepts/8ce32931-79f6-47cf-92b8-477aae3a6fbc
+
+theres a class with a single method to return an array of strings ....this is the seed data for the app.
+
+in activity_main.xml we add an id to a TextView object. It has to be
+"@+id/tv_toy_names"
+"@" to look in the res foulder
+"+" to add it if it does not exist
+"id" the attribute
+
+in MainActiity we define a TextView object variable... its pretty crazy
+
+  mToysListTextView = (TextView) findViewById(R.id.tv_toy_names);
+  the name seems like can be anything
+  id is a method of class R.
+  not sure where the method findView comes from ... not from R.id and not from TextView
+  
+  ok so lots of cool stuff here
+  - add a java class that returns an array
+  - add an id to a component   android:id="@+id/someName"
+  - use that id in MainActivity to pair an instance of the component you want, to the data.i guess
+  	so we can use TextView variableName = (TextView) findViewById(R.id.theIDWeMade)
+  	not sure what happens when we have multple views ...
+  
+  
+  
+  What are some best practices associated with setting and declaring the properties of an Android user interface?
+  
+  
+  from the Github API exercise:
+  - building the toast, which is a use message, like an alert or success failure messages in express.
+  - AppCompatability is a base class for any class that wants to pass its functionality back to earler versions of the adk. 
+  
+  to display the URL, use Uri.Builder
+  
+  
+  Steps to querying an API:
+  	- NetworkUtils.java file in utilities
+  		- define string constants to build query
+  			- a bunch of imports
+  				
+  	- import android.net.Uri;
+	- import java.io.IOException;
+	- import java.io.InputStream;
+	- import java.net.HttpURLConnection;
+	- import java.net.URL;
+	- import java.util.Scanner;
+	
+	how does this connect to MainActivity?
+	
+
+Activity Lifecyle
+class Activity has callback methods that allow the activity to "know" it's state, that is, to know how a user is interacting with the app... so for example, is the user opening a different app in which case maybe your app should suspend services. 
+
+access token cupcake
+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
